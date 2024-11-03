@@ -21,10 +21,19 @@ public class Program2 {
 		System.out.println("Inserted! New id = " + newDep.getId());
 
 		
-		System.out.println("--- TEST 2: department findById ---");
+		System.out.println("\n--- TEST 2: department findById ---");
 		Department dep = departmentDao.findById(2);
 		System.out.println(dep);
 	
+		
+		System.out.println("\n--- TEST 3: department update---");
+		dep = departmentDao.findById(2);
+		dep.setName("Food");
+		departmentDao.update(dep);
+		System.out.println("Update completed");
+
+		
+		
 		sc.close();
 	}
 
