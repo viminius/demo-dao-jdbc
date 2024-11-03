@@ -32,6 +32,23 @@ public class Program2 {
 		departmentDao.update(dep);
 		System.out.println("Update completed");
 
+		System.out.println("\n--- TEST 4: department deleteById ---");
+        System.out.print("How many IDs do you want to delete? ");
+        int numIds = sc.nextInt();
+
+        for (int i = 0; i < numIds; i++) {
+            System.out.print("Digit the ID to be deleted: ");
+            int id = sc.nextInt();
+            try {
+                departmentDao.deleteById(id);
+                System.out.println("ID " + id + " succesfully deleted!");
+            } catch (Exception e) {
+                System.out.println("Error deleting ID " + id + ": " + e.getMessage());
+            }
+        }
+        
+        System.out.println("--- Program termined ---");
+		
 		
 		
 		sc.close();
