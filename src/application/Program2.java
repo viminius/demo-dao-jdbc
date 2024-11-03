@@ -1,5 +1,6 @@
 package application;
 
+import java.util.List;
 import java.util.Scanner;
 
 import model.dao.DaoFactory;
@@ -47,7 +48,13 @@ public class Program2 {
             }
         }
         
-        System.out.println("--- Program termined ---");
+        System.out.println("\n--- TEST 4: department findAll ---");
+        List<Department> list = departmentDao.findAll();
+        for (Department d : list) {
+            System.out.println(d);
+        }
+        
+        System.out.println("\n--- Program terminated ---");
 		
 		
 		
